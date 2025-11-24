@@ -6,156 +6,281 @@
 	<meta name="description" content="Petz — Produtos e serviços para o bem-estar do seu pet. Conheça nossos produtos e serviços de banho e tosa.">
 	<title>Home – Petz | Produtos e serviços para seu pet</title>
 	<link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-<!-- Cabeçalho -->
-	<header class="site-header">
-		<div class="header-container">
-			<img src="imagens/Tratadas/Logotipo.png" alt="Logo Petz" class="logo">
+	<!-- Cabeçalho -->
+	<header class="py-3">
+		<div class="container d-flex justify-content-between align-items-center">
+			<h2 class="m-0 text-white">Petz</h2>
 
-<!-- Menu de Navegação -->
-			<nav class="site-nav" aria-label="Menu principal">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="produtos.html">Produtos</a></li>
-					<li><a href="servicos.html">Serviços</a></li>
-					<li><a href="contato.html">Contato</a></li>
+			<!-- Menu de Navegação -->
+			<nav aria-label="Navegação principal">
+				<ul class="nav gap-3">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link text-white">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="produtos.html" class="nav-link text-white">Produtos</a>
+					</li>
+					<li class="nav-item">
+						<a href="servicos.html" class="nav-link text-white">Serviços</a>
+					</li>
+					<li class="nav-item">
+						<a href="contato.html" class="nav-link text-white">Contato</a>
+					</li>
+					<li class="nav-item">
+						<form class="d-flex" role="search" aria-label="Buscar produtos para pets">
+							<label class="visually-hidden" for="busca-header-home">Buscar</label>
+							<input
+								id="busca-header-home"
+								class="form-control me-2"
+								type="search"
+								placeholder="O que o seu pet precisa?"
+								aria-label="Digite o que o seu pet precisa"
+							>
+							<button class="pesquisar-nav btn btn-secondary" type="submit">
+								Pesquisar
+							</button>
+						</form>
+					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-<!-- Sobre nós -->
-	<main>
-		<section id="sobre-nos">
-			<h2>Sobre nós</h2>
-			<p>
-				A “Petz” nasceu do amor pelos animais e da vontade de oferecer um cuidado integral aos nossos amigos de quatro patas.
-				Localizada em Cidade X, temos o compromisso de entregar produtos e serviços de alta qualidade que garantam o bem-estar,
-				a saúde e a alegria dos pets, além da tranquilidade de seus tutores.
-			</p>
-			<p>
-				Nossa missão é ser a referência em petshop na região, com mais de 10 anos de experiência, reunindo em um só lugar produtos diversos
-				(acessórios, rações, higiene e limpeza) e serviços especializados como banho e tosa, sempre com carinho e respeito pelos animais.
-				Trabalhamos com uma equipe apaixonada e fornecedores confiáveis para garantir que cada escolha atenda aos padrões de cuidado que nossos clientes esperam.
-			</p>
+	<section class="banner-home" aria-hidden="true">
+		<img src="imagens/Tratadas/hero-banner.png" class="hero-banner-img" alt="">
+	</section>
 
-			<div class="sobre-imagens">
-				<figure>
-         			<img src="imagens/Tratadas/atendimentomedio.jpg" alt="Funcionária atendendo um cão de porte médio">
-          			<figcaption>Atendimento atento e personalizado</figcaption>
-        		</figure>
-				<figure>
-          			<img src="imagens/Tratadas/cachorrobanhomedio.jpeg" alt="Cachorro pequeno recebendo banho e tosa">
-          			<figcaption>Banho e tosa com carinho</figcaption>
-        		</figure>
+	<!-- Conteúdo principal -->
+	<main>
+		<h1 class="visually-hidden">Petz – Produtos, serviços, banho e tosa para seu pet</h1>
+
+		<!-- Sobre nós -->
+		<section id="sobre-nos">
+			<div class="container center">
+				<div class="row align-items-start sobre-row">
+					<div class="col-md-6 img-sobre">
+						<figure>
+							<img src="imagens/Tratadas/atendimento.jpg" alt="Funcionária atendendo um cão de porte médio" class="img-fluid">
+						</figure>
+					</div>
+
+					<div class="col-md-6 texto-sobre">
+						<h2>Sobre nós</h2>
+						<p>
+							A “Petz” nasceu do amor pelos animais e da vontade de oferecer um cuidado integral aos nossos amigos de quatro patas.
+							Localizada em Caçapava do Sul, temos o compromisso de entregar produtos e serviços de alta qualidade que garantam o bem-estar,
+							a saúde e a alegria dos pets, além da tranquilidade de seus tutores.
+						</p>
+						<p>
+							Aqui, entendemos que cada animal é único, por isso, cada atendimento é feito de forma individualizada, respeitando a
+							personalidade, necessidades e sensibilidade de cada pet.
+							Com décadas de dedicação, conquistamos a confiança da comunidade oferecendo
+							<strong>banho e tosa, clínica veterinária,
+							tele-busca, acessórios, alimentação e cuidados especiais</strong>, sempre com responsabilidade, ética e muito amor.
+							<strong>Estamos aqui para cuidar, acolher e fazer parte da vida do seu pet, todos os dias.</strong>
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
-<!-- Produtos -->
-		<section id="produtos-resumo">
-			<h2>Confira nossas categorias de produtos</h2>
+		<!-- Produtos -->
+		<section id="produtos-resumo" class="py-5" aria-labelledby="titulo-produtos-home">
+			<div class="container text-center">
+				<h2 id="titulo-produtos-home" class="mb-3">
+					Confira nossas categorias de produtos
+				</h2>
+				<p class="lead resumo-texto">
+					Explore as três principais categorias que oferecemos para cuidar do seu pet:
+					acessórios, rações e higiene &amp; limpeza.
+				</p>
+
+				<div class="carrossel-wrapper mt-4">
+					<button
+						class="carrossel-btn carrossel-btn-prev"
+						type="button"
+						aria-label="Ver produtos anteriores"
+					>
+						‹
+					</button>
+
+					<div class="carrossel-cards">
+						<div class="carrossel-container" id="carrossel-produtos">
+							<!-- Acessórios -->
+							<div class="card-item card">
+								<img src="imagens/Tratadas/roupa-pet.jpeg" class="card-img-top" alt="Roupa de inverno para cães">
+								<div class="card-body">
+									<span class="badge bg-secondary mb-2">Acessórios</span>
+									<h3 class="card-title fs-5">Roupa de inverno para cães</h3>
+									<p class="card-text mb-2">R$ 49,90</p>
+								</div>
+							</div>
+
+							<div class="card-item card">
+								<img src="imagens/Tratadas/brinquedo.jpg" class="card-img-top" alt="Brinquedo tipo bolinha para cães">
+								<div class="card-body">
+									<span class="badge bg-secondary mb-2">Acessórios</span>
+									<h3 class="card-title fs-5">Bolinha divertida</h3>
+									<p class="card-text mb-2">R$ 24,90</p>
+								</div>
+							</div>
+
+							<!-- Rações -->
+							<div class="card-item card">
+								<img src="imagens/Tratadas/raçao-adulto.jpg" class="card-img-top" alt="Ração para cães adultos">
+								<div class="card-body">
+									<span class="badge bg-warning text-dark mb-2">Rações</span>
+									<h3 class="card-title fs-5">Ração Premium Adultos</h3>
+									<p class="card-text mb-2">R$ 149,90</p>
+								</div>
+							</div>
+
+							<div class="card-item card">
+								<img src="imagens/Tratadas/raçao-filhote.jpg" class="card-img-top" alt="Ração para filhotes">
+								<div class="card-body">
+									<span class="badge bg-warning text-dark mb-2">Rações</span>
+									<h3 class="card-title fs-5">Ração Premium Filhotes</h3>
+									<p class="card-text mb-2">R$ 119,90</p>
+								</div>
+							</div>
+
+							<!-- Higiene &amp; Limpeza -->
+							<div class="card-item card">
+								<img src="imagens/Tratadas/tapetehigienico.jpg" class="card-img-top" alt="Tapete higiênico">
+								<div class="card-body">
+									<span class="badge bg-info text-dark mb-2">Higiene &amp; limpeza</span>
+									<h3 class="card-title fs-5">Tapete Higiênico Super Absorção</h3>
+									<p class="card-text mb-2">R$ 59,90</p>
+								</div>
+							</div>
+
+							<div class="card-item card">
+								<img src="imagens/Tratadas/fralda.jpg" class="card-img-top" alt="Fralda para cães">
+								<div class="card-body">
+									<span class="badge bg-info text-dark mb-2">Higiene &amp; limpeza</span>
+									<h3 class="card-title fs-5">Fralda para cães pequenos</h3>
+									<p class="card-text mb-2">R$ 49,90</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<button
+						class="carrossel-btn carrossel-btn-next"
+						type="button"
+						aria-label="Ver próximos produtos"
+					>
+						›
+					</button>
+				</div>
+
+				<div class="botao-produtos-wrapper">
+					<a href="produtos.html" class="botao-produtos">
+						Conheça todos os produtos
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Serviços -->
+		<section class="servicos-container" aria-labelledby="titulo-servicos-home">
+			<h2 id="titulo-servicos-home">Serviços</h2>
 			<p>
-				Explore as três principais categorias que oferecemos para cuidar do seu pet:
-				acessórios, rações e higiene &amp; limpeza.
+				Oferecemos serviços de banho e tosa, com ou sem tele-busca, realizados por profissionais experientes.
 			</p>
 
-<!-- Categoria 1 -->
-		<article aria-labelledby="acessorios-title">
-        	<h3 id="acessorios-title">Acessórios</h3>
-        	<div>
-          		<figure>
-            		<img src="imagens/Tratadas/roupapetmedio.jpeg" alt="Roupa de inverno para cães">
-            		<figcaption>Roupa de inverno para cães — R$ 49,90</figcaption>
-					<button onclick="window.location.href='produtos.html'">Saber mais</button>
-          		</figure>
+			<div class="servicos-linha">
+				<div class="servico-card">
+					<img src="imagens/Tratadas/card-servicos-tele-busca.jpg" class="servico-icon" alt="Banho e tosa com tele-busca">
 
-          		<figure>
-            		<img src="imagens/Tratadas/brinquedomedio.jpg" alt="Brinquedo tipo bolinha para cães">
-            		<figcaption>Bolinha divertida — R$ 24,90</figcaption>
-					<button onclick="window.location.href='produtos.html'">Saber mais</button>
-          		</figure>
-        	</div>
-      </article>
+					<h3 class="servico-titulo">Banho &amp; Tosa – com tele-busca</h3>
 
-<!-- Categoria 2 -->
-		<article aria-labelledby="racoes-title">
-        	<h3 id="racoes-title">Rações não perecíveis</h3>
-        	<div>
-          		<figure>
-            		<img src="imagens/Tratadas/raçaofilhote.jpg" alt="Ração premium para adultos">
-            		<figcaption>Ração Premium Adultos — R$ 149,90</figcaption>
-					<button onclick="window.location.href='produtos.html'">Saber mais</button>
-          		</figure>
+					<h4 class="servico-subtitulo">Limpeza prática e segura</h4>
 
-          		<figure>
-            		<img src="imagens/Tratadas/raçaofilhote.jpg" alt="Ração para filhotes">
-            		<figcaption>Ração Filhotes sabor carne — R$ 119,90</figcaption>
-					<button onclick="window.location.href='produtos.html'">Saber mais</button>
-          		</figure>
-        	</div>
-      </article>
+					<p class="servico-texto">
+						Comodidade de busca e entrega do pet em sua casa.
+						<strong>Valor: R$ 130,00</strong>
+					</p>
 
-<!-- Categoria 3 -->
-		<article aria-labelledby="higiene-title">
-        	<h3 id="higiene-title">Higiene e Limpeza</h3>
-        	<div>
-          		<figure>
-            		<img src="imagens/Tratadas/tapetehigienico.jpg" alt="Tapete higiênico">
-            		<figcaption>Tapete Higiênico Super Absorção — R$ 59,90</figcaption>
-					<button onclick="window.location.href='produtos.html'">Saber mais</button>
-          		</figure>
+					<div class="servico-botoes">
+						<a href="contato.html" class="btn-primary-servico">Agendar banho</a>
+						<a href="servicos.html" class="btn-secundario-servico">Saber mais</a>
+					</div>
+				</div>
 
-          		<figure>
-            		<img src="imagens/Tratadas/fralda.jpg" alt="Fralda descartável para cães pequenos">
-            		<figcaption>Fralda para cães pequenos — R$ 49,90</figcaption>
-					<button onclick="window.location.href='produtos.html'">Saber mais</button>
-         		</figure>
-        	</div>
-      	</article>
-	</section>
+				<div class="servico-card">
+					<img src="imagens/Tratadas/card-servicos-sem-tele-busca.png" class="servico-icon" alt="Banho e tosa sem tele-busca">
 
-<!-- Serviços -->
-		<section id="servicos-resumo">
-			<h2>Serviços</h2>
-			<p>Oferecemos serviços de banho e tosa, com ou sem tele-busca, realizados por profissionais experientes.</p>
-		<article>
-        	<h3>Banho &amp; Tosa – com tele-busca</h3>
-        	<p>Comodidade de busca e entrega do pet em sua casa. <strong>Valor: R$ 130,00</strong></p>
-			<button onclick="window.location.href='servicos.html'">Saber mais</button>
-      	</article>
+					<h3 class="servico-titulo">Banho &amp; Tosa – sem tele-busca</h3>
 
-      	<article>
-        	<h3>Banho &amp; Tosa – sem tele-busca</h3>
-        	<p>Atendimento na loja com equipe especializada. <strong>Valor: R$ 100,00</strong></p>
-			<button onclick="window.location.href='servicos.html'">Saber mais</button>
-      	</article>
-	</section>
-</main>
+					<h4 class="servico-subtitulo">Limpeza prática e segura</h4>
 
-<!-- Footer -->
+					<p class="servico-texto">
+						Atendimento na loja com equipe especializada.
+						<strong>Valor: R$ 100,00</strong>
+					</p>
+
+					<div class="servico-botoes">
+						<a href="contato.html" class="btn-primary-servico">Agendar banho</a>
+						<a href="servicos.html" class="btn-secundario-servico">Saber mais</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
 	<footer>
-		<address>
-			Petz – Rua das Flores, 123 – Bairro Central, Caçapava do Sul, RS<br>
-			Telefone: (55) 1234-5678<br>
-			E-mail: <a href="mailto:contato@petz.com.br">contato@petz.com.br</a>
-		</address>
-		<nav aria-label="Rodapé">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="produtos.html">Produtos</a></li>
-				<li><a href="servicos.html">Serviços</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-		</nav>
-		<p>Todos os direitos reservados © 2025 – Petz</p>
-		<p>Desenvolvido por Bianca T. Lima</p>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 mb-3">
+					<h5><strong>Petz</strong></h5>
+					<p class="small">Cuidar é amar.</p>
+				</div>
+
+				<div class="col-md-4 mb-3">
+					<h6 class="fw-bold">Links</h6>
+					<ul class="list-unstyled">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="servicos.html">Serviços</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 mb-3">
+					<h6 class="fw-bold">Contato</h6>
+					<p class="small mb-1">email@petz.com.br</p>
+					<p class="small">Caçapava do Sul - RS</p>
+				</div>
+
+			</div>
+
+			<div class="text-center small mt-3">
+				© 2025 Petz — Desenvolvido por Bianca T. Lima
+			</div>
+		</div>
 	</footer>
+
+	<script>
+		const carrossel = document.getElementById('carrossel-produtos');
+		const btnPrev = document.querySelector('.carrossel-btn-prev');
+		const btnNext = document.querySelector('.carrossel-btn-next');
+
+		btnNext.addEventListener('click', () => {
+			carrossel.scrollLeft += carrossel.clientWidth;
+		});
+
+		btnPrev.addEventListener('click', () => {
+			carrossel.scrollLeft -= carrossel.clientWidth;
+		});
+	</script>
 </body>
 </html>
-
-
-
-
-
