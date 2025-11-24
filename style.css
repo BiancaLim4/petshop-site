@@ -1,0 +1,634 @@
+/* ---------------- ROOT ---------------- */
+
+:root{
+	--c1:#5d4677;
+	--c2:#506EE5;
+	--c3:#4f209b;
+	--c4:#560f63;
+	--c5:#1D0C20;
+}
+
+/* ---------------- BASE / BODY ---------------- */
+
+body{
+	font-family: Arial, sans-serif;
+	background: var(--c1);
+	color: antiquewhite;
+}
+
+/* ---------------- EFEITO DE CARREGAMENTO (SEM AFETAR HEADER) ---------------- */
+
+@keyframes fadeInPage{
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* aplica o fade-in apenas nas seções de conteúdo */
+.banner-home,
+#sobre-nos,
+#produtos-resumo,
+.servicos-container,
+#banho-tosa,
+#clinica-veterinaria,
+#sem-tele,
+.banner,
+.form-section,
+.produtos-section{
+	opacity: 0;
+	transform: translateY(10px);
+	animation: fadeInPage 0.6s ease forwards;
+}
+
+/* ---------------- HEADER / FOOTER GERAIS ---------------- */
+
+header{
+	background: var(--c5);
+	padding: 10px 0;
+}
+
+header a{
+	color: #ffffff;
+	font-weight: 500;
+}
+
+header a:hover{
+	opacity: 0.6;
+}
+
+footer{
+	background: var(--c5);
+	color: #ffffff;
+	padding: 40px 0;
+	margin-top: 50px;
+}
+
+footer a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+/* ---------------- HOME: BANNER + SOBRE NÓS ---------------- */
+
+.banner-home{
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+}
+
+.hero-banner-img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+#sobre-nos{
+	min-height: 700px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.texto-sobre{
+	margin-left: -10px;
+	margin-top: 80px;
+}
+
+.img-sobre{
+	margin-top: 80px;
+	margin-right: 10px;
+}
+
+.btn-secondary{
+	background-color: #651F71;
+	border-color: #8d72ac;
+	border-radius: 8px;
+}
+
+.btn-secondary:hover{
+	background-color: #411349;
+	border-color: #8d72ac;
+	border-radius: 10px;
+}
+
+/* ---------------- HOME: PRODUTOS RESUMO / CARROSSEL ---------------- */
+
+#produtos-resumo{
+	background-color: #54226b;
+	min-height: 800px;
+}
+
+#produtos-resumo .resumo-texto{
+	max-width: 720px;
+	margin: 0 auto;
+	color: #e0e0e0;
+}
+
+#produtos-resumo h2{
+	position: relative;
+	display: inline-block;
+	color: #e0e0e0;
+	font-size: 2.4rem;
+}
+
+#produtos-resumo h2::after{
+	content: "";
+	display: block;
+	width: 500px;
+	height: 3px;
+	background: linear-gradient(90deg, #651F71, #5a229f);
+	border-radius: 999px;
+	margin: 8px auto 0;
+}
+
+.carrossel-wrapper{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.carrossel-cards{
+	overflow: hidden;
+	width: 100%;
+}
+
+.carrossel-container{
+	display: flex;
+	gap: 1.5rem;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	padding-bottom: 0.5rem;
+}
+
+.carrossel-container::-webkit-scrollbar{
+	display: none;
+}
+
+.card-item{
+	min-width: calc(50% - 1.5rem);
+	max-width: 480px;
+	flex-shrink: 0;
+}
+
+.card-item .card-img-top{
+	height: 300px;
+	object-fit: cover;
+}
+
+.carrossel-btn{
+	border: none;
+	background-color: #7b2cf5;
+	color: #ffffff;
+	border-radius: 50%;
+	width: 2.6rem;
+	height: 2.6rem;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.carrossel-btn:hover{
+	background-color: #9c4dff;
+}
+
+.botao-produtos-wrapper{
+	text-align: center;
+	margin-top: 40px;
+}
+
+.botao-produtos{
+	background: rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+	padding: 12px 35px;
+	border-radius: 50px;
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	font-weight: 700;
+	font-size: 0.9rem;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	backdrop-filter: blur(4px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	width: 380px;
+	max-width: 100%;
+}
+
+.botao-produtos:hover{
+	background: rgba(255, 255, 255, 0.35);
+	border-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------------- HOME: SERVIÇOS (CARDS) ---------------- */
+
+.servicos-container{
+	max-width: 980px;
+	margin: 80px auto;
+	text-align: center;
+	padding: 40px 32px 56px;
+	background: rgba(255, 255, 255, 0.02);
+	border-radius: 32px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+	position: relative;
+	overflow: hidden;
+}
+
+.servicos-container::before{
+	content: "";
+	position: absolute;
+	inset: -40%;
+	background: radial-gradient(circle at top, rgba(225, 192, 255, 0.35), transparent 60%);
+	opacity: 0.7;
+	z-index: -1;
+}
+
+.servicos-container h2{
+	color: #e0e0e0;
+	font-size: 2.4rem;
+	margin-bottom: 8px;
+	position: relative;
+}
+
+.servicos-container h2::after{
+	content: "";
+	display: block;
+	width: 500px;
+	height: 3px;
+	background: linear-gradient(90deg, #651F71, #5a229f);
+	border-radius: 999px;
+	margin: 10px auto 0;
+}
+
+.servicos-container > p{
+	color: #f3d9ff;
+	max-width: 620px;
+	margin: 16px auto 0;
+	font-size: 0.98rem;
+	opacity: 0.9;
+}
+
+.servicos-linha{
+	display: flex;
+	justify-content: center;
+	gap: 32px;
+	flex-wrap: wrap;
+	margin-top: 32px;
+}
+
+.servico-card{
+	background: #ffffff;
+	border-radius: 28px;
+	padding: 32px 26px 28px;
+	text-align: center;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+	flex: 0 1 320px;
+	max-width: 100%;
+	border: 1px solid rgba(151, 117, 255, 0.18);
+	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+}
+
+/* títulos/textos dos cards de serviço – voltam a ser escuros */
+.servico-titulo{
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-bottom: 8px;
+	color: #5a229f;
+}
+
+.servico-subtitulo{
+	font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #333333;
+}
+
+.servico-texto{
+	color: #555555;
+	font-size: 0.95rem;
+	line-height: 1.4rem;
+	margin-bottom: 20px;
+}
+
+.servico-card:hover{
+	transform: translateY(-8px);
+	box-shadow: 0 18px 36px rgba(0, 0, 0, 0.55);
+	border-color: rgba(151, 117, 255, 0.6);
+	background-color: #fff9ff;
+}
+
+.servico-icon{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 0 auto 22px;
+	border: 4px solid #ffe3ff;
+	box-shadow: 0 0 0 6px rgba(148, 81, 255, 0.15);
+}
+
+/* botões dos cards de serviço – mesmos estilos de antes */
+
+.btn-primary-servico{
+	width: 100%;
+	padding: 12px;
+	border: none;
+	background: #5a229f;
+	color: #ffffff;
+	font-weight: 600;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.btn-primary-servico:hover{
+	background: #7b2cf5;
+}
+
+.btn-secundario-servico{
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #d6b6ff;
+	background: #f7ecff;
+	color: #5a229f;
+	font-weight: 600;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.btn-secundario-servico:hover{
+	background: #edd8ff;
+}
+
+/* ---------------- PÁGINA SERVIÇOS (FAIXAS COLORIDAS) ---------------- */
+
+#banho-tosa{
+	background-color: var(--c5);
+}
+
+.servicos-label{
+	font-size: 0.9rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: #e0e0e0;
+}
+
+.banho-tosa-titulo{
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #9b8643;
+}
+
+#clinica-veterinaria{
+	background-color: var(--c4);
+	padding-top: 50px;
+}
+
+.clinica-titulo{
+	font-size: 2.3rem;
+	font-weight: 700;
+	color: #e0e0e0;
+}
+
+#clinica-veterinaria p{
+	max-width: 520px;
+	color: #e0e0e0;
+}
+
+#sem-tele{
+	background-color: var(--c3);
+	color: #e0e0e0;
+}
+
+/* ---------------- CONTATO ---------------- */
+
+.banner{
+	background: linear-gradient(to right, var(--c5), var(--c4));
+	color: #ffffff;
+	padding: 100px 0;
+	margin: 0;
+	width: 100%; 
+}
+
+.form-section{
+	padding: 50px 0;
+}
+
+.form-card{
+	background: rgba(0, 0, 0, 0.08);
+	border-radius: 16px;
+	padding: 32px 24px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.form-control{
+	border: 1px solid var(--c3);
+	border-radius: 8px;
+	padding: 10px;
+	background-color: #ffffff;
+	font-size: 0.95rem;
+}
+
+.form-control:focus{
+	border-color: var(--c3);
+	box-shadow: 0 0 0 0.15rem rgba(80, 110, 229, 0.2);
+}
+
+.form-control::placeholder{
+	color: #999999;
+	font-size: 0.9rem;
+}
+
+.form-section h3{
+	color: #ffffff;
+	margin-bottom: 1.5rem;
+}
+
+.form-section h5{
+	color: #ffffff;
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.form-section hr{
+	border-color: rgba(255, 255, 255, 0.25);
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
+}
+
+.form-label{
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.form-check-label{
+	font-size: 0.9rem;
+}
+
+.form-check-input{
+	cursor: pointer;
+	accent-color: var(--c2);
+}
+
+.btn-main{
+	background: var(--c4);
+	color: #ffffff;
+	padding: 14px;
+	border: 1px solid var(--c3);
+	border-radius: 8px;
+	width: 100%;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 0.03em;
+}
+
+.btn-main:hover{
+	background: var(--c3);
+	border-color: var(--c2);
+	color: #ffffff;
+}
+
+/* ---------------- PRODUTOS ---------------- */
+
+.produtos-section > .container{
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.titulo-produtos{
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: #e0e0e0;
+	margin-bottom: 12px;
+	position: relative;
+}
+
+.titulo-produtos::after{
+	content: "";
+	display: block;
+	width: 420px;
+	max-width: 90%;
+	height: 3px;
+	background: linear-gradient(90deg, #651F71, #5a229f);
+	border-radius: 999px;
+	margin: 12px auto 0;
+}
+
+.texto-intro{
+	max-width: 700px;
+	margin: 0 auto 40px auto;
+	color: #e0e0e0;
+	opacity: 0.9;
+}
+
+.categoria-bloco{
+	max-width: 1200px;
+	margin: 0 auto 60px auto;
+	text-align: center;
+}
+
+.categoria-titulo{
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #f3d9ff;
+	margin-bottom: 24px;
+}
+
+.categoria-titulo::after{
+	content: "";
+	display: block;
+	width: 160px;
+	height: 3px;
+	background: linear-gradient(90deg, #651F71, #5a229f);
+	border-radius: 999px;
+	margin: 8px auto 0;
+}
+
+.produto-card{
+	position: relative;
+	background: rgba(255, 255, 255, 0.12);
+	border-radius: 20px;
+	padding: 24px;
+	text-align: center;
+	backdrop-filter: blur(4px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+	transition: 0.25s ease;
+	width: 100%;
+	overflow: hidden;
+}
+
+.produto-card img{
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 16px;
+	margin-bottom: 15px;
+	transition: transform 0.3s ease;
+}
+
+.produto-card:hover img{
+	transform: scale(1.04);
+}
+
+.produto-card h4{
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.produto-card .preco{
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #dcbaff;
+	margin: 6px 0 12px;
+}
+
+.produto-card .descricao{
+	font-size: 0.95rem;
+	color: #eeeeee;
+	opacity: 0.9;
+	margin-bottom: 18px;
+}
+
+.produto-btn{
+	width: 100%;
+	padding: 14px;
+	background: var(--c4);
+	border: 1px solid var(--c3);
+	color: #ffffff;
+	font-weight: 700;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.produto-btn:hover{
+	background: var(--c3);
+	border-color: var(--c2);
+}
+
+/* ---------------- PAGE BANNER ---------------- */
+
+.banner-produtos .container{
+	text-align: center;
+}
+
+.banner-produtos h1{
+	margin-bottom: 10px;
+}
+
+.banner-produtos p{
+	font-size: 1.05rem;
+}
+
