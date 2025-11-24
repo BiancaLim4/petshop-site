@@ -4,126 +4,211 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Catálogo de produtos Petz — acessórios, rações e itens de higiene e limpeza para pets.">
-  	<title>Produtos – Petz | Catálogo</title>
+	<title>Produtos – Petz | Catálogo</title>
 	<link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<img src="imagens/Tratadas/Logotipo.png" alt="Logotipo Petz">
-		<h1>Petz - Amar é cuidar</h1>
-<!-- Menu de navegação -->
-		<nav aria-label="Menu principal">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="produtos.html">Produtos</a></li>
-				<li><a href="servicos.html">Serviços</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-		</nav>
+	<!-- Cabeçalho -->
+	<header class="py-3">
+		<div class="container d-flex justify-content-between align-items-center">
+			<h2 class="m-0 text-white">Petz</h2>
+
+			<nav aria-label="Navegação principal">
+				<ul class="nav gap-3">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link text-white">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="produtos.html" class="nav-link text-white" aria-current="page">Produtos</a>
+					</li>
+					<li class="nav-item">
+						<a href="servicos.html" class="nav-link text-white">Serviços</a>
+					</li>
+					<li class="nav-item">
+						<a href="contato.html" class="nav-link text-white">Contato</a>
+					</li>
+					<li class="nav-item">
+						<form class="d-flex" role="search" aria-label="Buscar produtos para pets">
+							<label class="visually-hidden" for="busca-header-produtos">Buscar</label>
+							<input
+								id="busca-header-produtos"
+								class="form-control me-2"
+								type="search"
+								placeholder="O que o seu pet precisa?"
+								aria-label="Digite o que o seu pet precisa"
+							>
+							<button class="pesquisar-nav btn btn-secondary" type="submit">
+								Pesquisar
+							</button>
+						</form>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
-<!-- Categoria 1: Acessórios -->
-		<main>
-			<section id="produtos-page">
-     			<h2>Confira nossas categorias de produtos</h2>
+	<!-- BANNER PRODUTOS -->
+<section class="banner banner-produtos">
+	<div class="container">
+		<h1 class="fw-bold text-white">Produtos</h1>
+		<p class="mb-0 text-white-50">
+			Veja nossos principais itens para o bem-estar do seu pet
+		</p>
+	</div>
+</section>
 
-      			<section aria-labelledby="acessorios-title">
-        			<h3 id="acessorios-title">Acessórios</h3>
+</main>
 
-        			<article class="produto" aria-labelledby="produto-roupa">
-          				<figure>
-            				<img src="imagens/Tratadas/roupapetmedio.jpeg" alt="Roupa de inverno para cães">
-            				<figcaption>Roupa de Inverno para Cães — R$ 49,90</figcaption>
-          				</figure>
-          				<h4 id="produto-roupa">Roupa de Inverno para Cães</h4>
-          				<p>Qualidade premium com tecido soft-fleece que mantém o pet aquecido. Material antialérgico e costuras reforçadas.</p>
-          				<p>Composição: 100% poliéster micro-fleece, acabamento repelente à água.</p>
-          				<button onclick="window.location.href='contato.html'">Entrar em contato</button>
-        			</article>
+	<main class="produtos-section py-5">
+		<!-- Categoria: Acessórios -->
+		<section class="categoria-bloco mb-5">
+			<h3 class="categoria-titulo">Acessórios</h3>
 
-        			<article class="produto" aria-labelledby="produto-brinquedo">
-          				<figure>
-            				<img src="imagens/Tratadas/brinquedomedio.jpg" alt="Brinquedo bolinha para cães">
-            				<figcaption>Bolinha Divertida — R$ 24,90</figcaption>
-          				</figure>
-          				<h4 id="produto-brinquedo">Brinquedo “Bolinha Divertida”</h4>
-          				<p>Fabricado em borracha natural de alta resistência. Textura que ajuda na limpeza dos dentes enquanto o pet brinca.</p>
-          				<p>Material: borracha natural 100%, sem ftalatos. Indicado para cães até 15 kg.</p>
-          				<button onclick="window.location.href='contato.html'">Entrar em contato</button>
-        			</article>
-      			</section>
+			<div class="row g-4 justify-content-center">
 
-<!-- Categoria 2: Rações não perecíveis -->
-				<section aria-labelledby="racoes-title">
-        			<h3 id="racoes-title">Rações não perecíveis</h3>
+				<div class="col-12 col-md-6">
+					<div class="produto-card">
+						<img src="imagens/Tratadas/roupa-pet.jpeg" alt="Roupa de inverno para cães">
+						<h4>Roupa de Inverno para Cães</h4>
+						<p class="preco">R$ 49,90</p>
+						<p class="descricao">
+							Tecido macio e confortável, ideal para temperaturas baixas.
+						</p>
+						<button class="produto-btn" onclick="window.location.href='contato.html'">
+							Entrar em contato
+						</button>
+					</div>
+				</div>
 
-        			<article class="produto" aria-labelledby="produto-adulto">
-          				<figure>
-            				<img src="imagens/Tratadas/racaoadulto.jpg" alt="Ração premium para cães adultos">
-            				<figcaption>Ração Premium Adultos — R$ 149,90</figcaption>
-          				</figure>
-          				<h4 id="produto-adulto">Ração Premium para Cães Adultos</h4>
-          				<p>Formulada com 28% de proteína animal, ômega-3 e prebióticos para digestão saudável e pelagem brilhante.</p>
-          				<button onclick="window.location.href='contato.html'">Entrar em contato</button>
-        			</article>
+				<div class="col-12 col-md-6">
+					<div class="produto-card">
+						<img src="imagens/Tratadas/brinquedo.jpg" alt="Brinquedo bolinha para cães">
+						<h4>Bolinha Divertida</h4>
+						<p class="preco">R$ 24,90</p>
+						<p class="descricao">
+							Borracha natural e resistente, ajuda na limpeza dos dentes.
+						</p>
+						<button class="produto-btn" onclick="window.location.href='contato.html'">
+							Entrar em contato
+						</button>
+					</div>
+				</div>
 
-        			<article class="produto" aria-labelledby="produto-filhote">
-          				<figure>
-            				<img src="imagens/Tratadas/racaofilhote.jpg" alt="Ração para filhotes">
-            				<figcaption>Ração Filhotes sabor carne — R$ 119,90</figcaption>
-          				</figure>
-          				<h4 id="produto-filhote">Ração para Filhotes Sabor Carne</h4>
-          				<p>Com DHA e vitamina E para desenvolvimento cerebral e imunológico. Crocância adaptada ao pequeno mordedor.</p>
-          				<button onclick="window.location.href='contato.html'">Entrar em contato</button>
-        			</article>
-      			</section>
+			</div>
+		</section>
 
-<!-- Categoria 3: Higiene e Limpeza -->
-				<section aria-labelledby="higiene-title">
-        			<h3 id="higiene-title">Higiene e Limpeza</h3>
+		<!-- Categoria: Rações -->
+		<section class="categoria-bloco mb-5">
+			<h3 class="categoria-titulo">Rações</h3>
 
-        			<article class="produto" aria-labelledby="produto-tapete">
-          				<figure>
-            				<img src="imagens/Tratadas/tapetehigienico.jpg" alt="Tapete higiênico para cães">
-            				<figcaption>Tapete Higiênico Super Absorção — R$ 59,90</figcaption>
-          				</figure>
-          				<h4 id="produto-tapete">Tapete Higiênico Super Absorção</h4>
-          				<p>Camada dupla de absorção e neutralizador de odores. Ideal para treinamento ou hospedagem.</p>
-          				<button onclick="window.location.href='contato.html'">Entrar em contato</button>
-        			</article>
+			<div class="row g-4 justify-content-center">
 
-        			<article class="produto" aria-labelledby="produto-fralda">
-          				<figure>
-            				<img src="imagens/Tratadas/fralda.jpg" alt="Fralda descartável para cães pequenos">
-            				<figcaption>Fralda para Cães de Pequeno Porte — R$ 49,90</figcaption>
-         			 	</figure>
-          				<h4 id="produto-fralda">Fralda para Cães de Pequeno Porte</h4>
-          				<p>Ajuda anatômica e gel superabsorvente que mantém a pele seca por até 12h.</p>
-          				<button onclick="window.location.href='contato.html'">Entrar em contato</button>
-        			</article>
-      			</section>
-    	</section>
- 	</main>
+				<div class="col-12 col-md-6">
+					<div class="produto-card">
+						<img src="imagens/Tratadas/raçao-adulto.jpg" alt="Ração para cães adultos">
+						<h4>Ração Premium Adultos</h4>
+						<p class="preco">R$ 149,90</p>
+						<p class="descricao">
+							Alta proteína, ômega-3 e prebióticos para digestão saudável.
+						</p>
+						<button class="produto-btn" onclick="window.location.href='contato.html'">
+							Entrar em contato
+						</button>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6">
+					<div class="produto-card">
+						<img src="imagens/Tratadas/raçao-filhote.jpg" alt="Ração para filhotes">
+						<h4>Ração Premium Filhotes</h4>
+						<p class="preco">R$ 119,90</p>
+						<p class="descricao">
+							Com DHA e vitaminas para desenvolvimento saudável.
+						</p>
+						<button class="produto-btn" onclick="window.location.href='contato.html'">
+							Entrar em contato
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Categoria: Higiene & Limpeza -->
+		<section class="categoria-bloco mb-5">
+			<h3 class="categoria-titulo">Higiene & Limpeza</h3>
+
+			<div class="row g-4 justify-content-center">
+
+				<div class="col-12 col-md-6">
+					<div class="produto-card">
+						<img src="imagens/Tratadas/tapetehigienico.jpg" alt="Tapete higiênico para cães">
+						<h4>Tapete Higiênico</h4>
+						<p class="preco">R$ 59,90</p>
+						<p class="descricao">
+							Super absorvente com barreira antiodor.
+						</p>
+						<button class="produto-btn" onclick="window.location.href='contato.html'">
+							Entrar em contato
+						</button>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6">
+					<div class="produto-card">
+						<img src="imagens/Tratadas/fralda.jpg" alt="Fralda para cães pequenos">
+						<h4>Fralda para Cães</h4>
+						<p class="preco">R$ 49,90</p>
+						<p class="descricao">
+							Gel superabsorvente e design anatômico.
+						</p>
+						<button class="produto-btn" onclick="window.location.href='contato.html'">
+							Entrar em contato
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</div>
+</main>
 
 
-<!-- Footer -->
+	<!-- Footer -->
 	<footer>
-		<address>Petz – Rua das Flores, 123 – Bairro Central, Caçapava do Sul, Rio Grande do Sul<br>
-		Telefone: (55) 1234-5678<br>
-		E-mail: Telefone: (55) 1234-5678 — E-mail: <a href="mailto:contato@petz.com.br">contato@petz.com.br</a></address>
-		<nav aria-label="Rodapé">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="produtos.html">Produtos</a></li>
-				<li><a href="servicos.html">Serviços</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-		</nav>
-		<p>Todos os direitos reservados © 2025 – Petz</p>
-		<p>Desenvolvido por Bianca T. Lima</p>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 mb-3">
+					<h5><strong>Petz</strong></h5>
+					<p class="small">Cuidar é amar.</p>
+				</div>
+
+				<div class="col-md-4 mb-3">
+					<h6 class="fw-bold">Links</h6>
+					<ul class="list-unstyled">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="servicos.html">Serviços</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 mb-3">
+					<h6 class="fw-bold">Contato</h6>
+					<p class="small mb-1">email@petz.com.br</p>
+					<p class="small">Caçapava do Sul - RS</p>
+				</div>
+
+			</div>
+
+			<div class="text-center small mt-3">
+				© 2025 Petz — Desenvolvido por Bianca T. Lima
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
-
-
-
