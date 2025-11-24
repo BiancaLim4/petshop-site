@@ -4,77 +4,171 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Serviços Petz — banho e tosa com ou sem tele-busca. Agende o melhor para seu pet.">
-  	<title>Serviços – Petz | Banho e Tosa</title>
+	<title>Serviços – Petz | Banho e Tosa</title>
 	<link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet">
 </head>
-<body>
-	<header>
-		<img src="imagens/Tratadas/Logotipo.png" alt="Logotipo Petz">
-		<h1>Petz - Amar é cuidar</h1>
+<body class="body-servicos">
+	<!-- Cabeçalho -->
+	<header class="py-3">
+		<div class="container d-flex justify-content-between align-items-center">
+			<h2 class="m-0 text-white">Petz</h2>
 
-<!-- Menu de Navegação -->
-		<nav aria-label="Menu principal">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="produtos.html">Produtos</a></li>
-				<li><a href="servicos.html">Serviços</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-		</nav>
+			<nav aria-label="Navegação principal">
+				<ul class="nav gap-3">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link text-white">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="produtos.html" class="nav-link text-white">Produtos</a>
+					</li>
+					<li class="nav-item">
+						<a href="servicos.html" class="nav-link text-white" aria-current="page">Serviços</a>
+					</li>
+					<li class="nav-item">
+						<a href="contato.html" class="nav-link text-white">Contato</a>
+					</li>
+					<li class="nav-item">
+						<form class="d-flex" role="search" aria-label="Buscar produtos para pets">
+							<label class="visually-hidden" for="busca-header-servicos">Buscar</label>
+							<input
+								id="busca-header-servicos"
+								class="form-control me-2"
+								type="search"
+								placeholder="O que o seu pet precisa?"
+								aria-label="Digite o que o seu pet precisa"
+							>
+							<button class="pesquisar-nav btn btn-secondary" type="submit">
+								Pesquisar
+							</button>
+						</form>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
-<!-- Apresentação dos serviços -->
 	<main>
-		<section id="servicos-page">
-			<h2>Nossos serviços</h2>
-			<p>Oferecemos banho e tosa com qualidade, com opção de tele-busca para maior comodidade.</p>
-<!-- Serviço 1 = com tele-busca -->
-			<article aria-labelledby="servico-telebusca">
-        		<h3 id="servico-telebusca">Banho e Tosa com tele-busca — R$ 130,00</h3>
-        		<figure>
-          			<img src="imagens/Tratadas/cachorrobanhomedio.jpeg" alt="Cachorro recebendo banho profissional">
-          			<figcaption>Serviço com tele-busca</figcaption>
-        		</figure>
-        		<p>
-          		Buscamos o pet em sua casa, realizamos banho, tosa, secagem e finalização com produtos adequados ao tipo de pelagem.
-          		Inclui avaliação prévia e cuidado individualizado.
-        		</p>
-        		<button onclick="window.location.href='contato.html'">Agendar agora</button>
-      		</article>
+		<h1 class="visually-hidden">Serviços de banho e tosa da Petz</h1>
 
-<!-- Serviço 2 = sem tele-busca -->
-			<article aria-labelledby="servico-loja">
-        		<h3 id="servico-loja">Banho e Tosa sem tele-busca — R$ 100,00</h3>
-        		<figure>
-          			<img src="imagens/Tratadas/cachorromedio.jpg" alt="Cachorro após tosa profissional">
-          			<figcaption>Serviço na loja</figcaption>
-        		</figure>
-        		<p>
-          		Atendimento em nossa loja com equipe especializada para cortes por raça ou estilo, secagem cuidadosa e acabamento profissional.
-        		</p>
-        		<button onclick="window.location.href='contato.html'">Agendar agora</button>
-     		</article>
-    	</section>
-  </main>
+		<!-- Apresentação dos serviços -->
+		<section id="banho-tosa" class="py-5">
+			<div class="container">
+				<div class="row align-items-center text-center text-md-start">
+					<!-- Cachorro à esquerda -->
+					<div class="col-md-4 mb-4 mb-md-0 text-center">
+						<img src="imagens/servicos-dog-and-cat.png" alt="Cachorro e gato lado a lado" class="img-fluid">
+					</div>
 
-<!-- Footer -->
+					<!-- Texto no centro -->
+					<div class="col-md-4">
+						<h2 class="banho-tosa-titulo mb-3">Banho e Tosa</h2>
+						<p class="mb-2">
+							Dispomos de uma equipe especializada e treinada que realizará o banho e tosa do seu pet com os melhores produtos do mercado em local adequado, que atende às diretrizes legais estabelecidas.
+						</p>
+						<p class="mb-0">
+							Na Petz você tem a garantia de que seu pet será atendido com todo o cuidado necessário, por profissionais qualificados.
+						</p>
+					</div>
+
+					<!-- Gato à direita -->
+					<div class="col-md-4 d-none d-md-block text-center">
+						<img src="imagens/servicos-pets.png" alt="Gato deitado" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="clinica-veterinaria" class="py-5">
+			<div class="container">
+				<div class="row align-items-center">
+					<!-- Texto à esquerda -->
+					<div class="col-md-6 mb-4 mb-md-0 text-white">
+						<h2 class="clinica-titulo mb-3">
+							Com tele-busca — R$ 130,00
+						</h2>
+						<p class="mb-3">
+							Cuidamos do seu pet sem que você precise sair de casa.<br><br>
+							Nosso serviço de banho e tosa com tele-busca foi pensado para oferecer
+							<strong>conforto, praticidade e segurança</strong> no dia a dia de quem ama seu pet,
+							mas tem uma rotina corrida.<br>
+							Buscamos o seu companheiro na sua residência, realizamos todo o processo de banho,
+							tosa, secagem e finalização com produtos premium, sempre respeitando o tipo de pelagem
+							e as necessidades individuais do seu pet.<br><br>
+							Com uma equipe treinada, ambiente higienizado e avaliação prévia, garantimos
+							um atendimento carinhoso, seguro e totalmente personalizado.<br>
+							<strong>Você relaxa. Nós cuidamos do resto.</strong>
+						</p>
+					</div>
+					<!-- Imagem à direita -->
+					<div class="col-md-6">
+						<img src="imagens/Tratadas/banho-tosa-tele-busca.jpeg" alt="Banho e tosa com tele-busca" class="img-fluid rounded-3 shadow">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="sem-tele" class="py-5">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-6 mb-4 mb-md-0 text-white">
+						<img src="imagens/Tratadas/banho-tosa-sem-tele-busca.jpeg" alt="Banho e tosa no local" class="img-fluid rounded-3 shadow">
+					</div>
+
+					<div class="col-md-6">
+						<h2 class="clinica-titulo mb-3">
+							Sem tele-busca — R$ 100,00
+						</h2>
+						<p class="mb-3">
+							Banho e tosa com cuidado profissional do jeitinho que seu pet merece.<br><br>
+							Se você prefere trazer seu pet até nossa loja, encontrará um ambiente
+							<strong>higienizado, equipado e preparado</strong> para um atendimento de alta qualidade.<br>
+							Nossa equipe é especializada em técnicas de banho e tosa para todas as raças e estilos,
+							garantindo uma secagem cuidadosa, um acabamento impecável e uma experiência confortável
+							para o seu amigo.<br><br>
+							Com produtos selecionados, carinho em cada etapa e profissionais capacitados,
+							entregamos um resultado que dá para ver, e sentir, no cheirinho e na maciez do pelo.<br>
+							<strong>Perfeito para quem busca confiança e atendimento próximo.</strong>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
 	<footer>
-		<address>Petz – Rua das Flores, 123 – Bairro Central, Caçapava do Sul, Rio Grande do Sul<br>
-		Telefone: (55) 1234-5678<br>
-		E-mail: <a href="mailto:contato@petz.com.br">contato@petz.com.br</a></address>
-		<nav aria-label="Rodapé">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="produtos.html">Produtos</a></li>
-				<li><a href="servicos.html">Serviços</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-		</nav>
-		<p>Todos os direitos reservados © 2025 – Petz</p>
-		<p>Desenvolvido por Bianca T. Lima</p>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 mb-3">
+					<h5><strong>Petz</strong></h5>
+					<p class="small">Cuidar é amar.</p>
+				</div>
+
+				<div class="col-md-4 mb-3">
+					<h6 class="fw-bold">Links</h6>
+					<ul class="list-unstyled">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="servicos.html">Serviços</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 mb-3">
+					<h6 class="fw-bold">Contato</h6>
+					<p class="small mb-1">email@petz.com.br</p>
+					<p class="small">Caçapava do Sul - RS</p>
+				</div>
+
+			</div>
+
+			<div class="text-center small mt-3">
+				© 2025 Petz — Desenvolvido por Bianca T. Lima
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
-
-
-
